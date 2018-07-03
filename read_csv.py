@@ -10,17 +10,17 @@ metadata=MetaData()
 
 #creation de la classe
 #nom de l'institution et création des champs de la table
-class institution(Base):
+class academie(Base):
     __tablename__='bibliotheque'
-    test_id= Column(Integer, primary_key=True)
-    test_auteur= Column(String(200), nullable=False)
-    test_titre=Column(String(400), nullable=False)
-    test_publisher=Column(String(200), nullable=False)
-    test_annee=Column(Text, nullable=False)
-    test_localisation=Column(String(200), nullable=False)
+    fix_id= Column(Integer, primary_key=True)
+    fix_auteur= Column(String(200), nullable=False)
+    fix_titre=Column(String(400), nullable=False)
+    fix_publisher=Column(String(200), nullable=False)
+    fix_annee=Column(Text, nullable=False)
+    fix_localisation=Column(String(200), nullable=False)
 
     #creation de la base et connexion au server: remplacer user et pwd !
-engine=create_engine('mysql://user:pwd@localhost/institution')
+engine=create_engine('mysql://user:pwd@localhost/academie')
 
 #creation de la table
 Base.metadata.create_all(engine)
