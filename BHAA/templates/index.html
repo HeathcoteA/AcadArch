@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title></title>
-    </head>
+{% extends "conteneur.html" %}
+{% block liste %}
 
-    <body>
-        <h1>Application de gestion de la bibliothèque patrimoniale de l'Académie d'Architecture</h1>
-        <hr>BHAA <i> <small>(titre provisoire)</small/></i></hr>
+<h1>BHAA</h1>
+    {% if livre %}
+    <p>Application de gestion de la bibliothèque patrimoniale de l'Académie d'Architecture</p>
+    <ul>
+
+        <li>accueil</li>
+        <li>formulaire</li>
+        <li>identification</li>
+
+    </ul>
+    <p>Il y a {{livre|length}} livres enregistrés :</p>
         <ul>
-
-            <li>accueil</li>
-            <li>formulaire</li>
-            <li>identification</li>
-
+            {% for livre in livres %}
+                <li><a href="{{url_for('livre', livre_id=livre.livre_id)}}">{{livre.livre_titre}}</a></li>
+            {% endfor %}
         </ul>
-    </body>
-</html>
+    {% else %}
+        <p>La base de données de la <b>bibliothèque</b> est en cours de constitution</p>
+    {% endif %}
+{% endblock %}
