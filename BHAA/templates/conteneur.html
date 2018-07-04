@@ -5,9 +5,9 @@
         {% include "partials/metadata.html" %}
     </head>
     <body>
-      {% extends "partials/header.html" %}
+      {% include "partials/header.html" %}
         <div><h1>Bienvenue dans l'application de consultation et de gestion de la Bibliothèque Historique de l'Académie d'Architecture</h1></div>
         <div>{% block liste%}{%endblock%}</div>
-        {% extends "partials/footer.html" %}
+        {% include "partials/footer.html" %}
     </body>
 </html>
