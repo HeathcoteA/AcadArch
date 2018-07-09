@@ -79,7 +79,7 @@ a {
 }
 
 body{
-  background-image: url(static/images/fonds.jpg);
+  background-image: image(static/images/fonds.jpg);
 }
 
 /* img.fondecran {
