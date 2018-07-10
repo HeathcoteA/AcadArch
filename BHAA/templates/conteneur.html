@@ -1,18 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
     <head>
-        <title>BHAA</title>
+      <meta charset="UTF-8"/>
+        <title>BHAA {%block titre %}{%endblock%}</title>
+        <link media="../images/fonds.jpg"/>
         {% include "partials/css.html" %}
         {% include "partials/metadata.html" %}
     </head>
-    <body>
+    <body class="fonds">
       {% include "partials/header.html" %}
       <!-- <img src="static/images/fonds.jpg" id="fondecran" class="fondecran" alt="fonds d'écran"/> -->
+<div>
       {% block corps %}
       {% endblock %}
       {% block catalogue %}
       {% endblock %}
-
-        <!-- <div>{% block liste%}{%endblock%}</div> -->
+</div>
         {% include "partials/footer.html" %}
     </body>
 </html>
