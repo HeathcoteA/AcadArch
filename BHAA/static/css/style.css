@@ -13,11 +13,41 @@ header {
   position: fixed;
   z-index: 2;
 }
+
+ body {
+  color:black;
+  background-color: white;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+}
+
+/* body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Seon la documentation hero-image de W3school */
+/* classe de l'image */
+/* .image_de_fonds {  */
+    /* image utilisée */
+    /* background-image: url("fonds.jpg"); */
+
+    /* hateur de l'image */
+    /* height: 50%; */
+
+    /* Position et paramètres de l'image */
+  /*  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
 footer {
   width: 100%;
   left: 0px;
   bottom: 0;
-  position:static;
+  position: relative;
+  z-index: 2;
 }
 a {
   font-style: italic;
@@ -36,6 +66,7 @@ a {
 }
 .card-body{
   padding: 150px;
+  z-index: 2;
 }
 
 .container-card{
@@ -78,11 +109,30 @@ a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-#catalogue_table {
-  overflow-y: scroll;
 
+#image-de-fonds{
+    width: 100%;
+    position: fixed;
+  /* code inspiré de la documentation hero-image de W3school
+image utilisée
+      background-image: url("fonds.jpg");
+
+       hateur de l'image
+  height: 50%;
+
+Position et paramètres de l'image
+   background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      */
 }
+
 
 #corps {
   width: 50%;
+  z-index: 1;
+}
+#catalogue_table {
+  overflow-y: scroll;
 }
