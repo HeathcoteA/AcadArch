@@ -1,39 +1,48 @@
 {% extends "conteneur.html" %}
 {% block titre %}| Accueil{%endblock%}
 {% block corps %}
-<h1 class="display-4">Brouillon</h1>
-<p class="text-accueil">"L’Académie d’Architecture est la plus grande collection privée de dessins d’architecture en France. Fondée en 1840 sous le nom de Société centrale des Architectes, l’Académie d’ Architecture est, depuis 1953, une institution à caractère culturel qui groupe un nombre limité d’architectes français ainsi que des membres étrangers. Dès 1843, la Société Centrale des architectes s’est attachée à constituer une bibliothèque et progressivement une collection des dessins originaux, des gravures et des photographies surtout par les dons que lui faisaient ses membres.l’Académie, tout en restant propriétaire de ses fonds, confie au Centre d’Archives du 20e siècle la conservation, traitement, gestion et valorisation de sa collection du 20ème siècle.
-</p>
-<div class="row">
-  <div class="col-2"></div>
-  <div class="col-sm-14 col-xs-4 col-sm-offset-1 col-xs-offset-1">
-    <p class="text-accueil">
-      La collection du <b>Catalogue I</b> (1750 - 1900) est ouverte au public sur RDV, <br/> au siège de l’Académie, <i>Hôtel de Chaulnes, 9 place des Vosges, 75004 Paris</i>
-    </p>
 
+<h1 class="display-4">Accueil</h1>
+        <p class="text-accueil">
+          "L’Académie d’Architecture est la plus grande collection privée de
+            dessins d’architecture en France. Fondée en 1840 sous le nom de Société centrale des
+            Architectes, l’Académie d’ Architecture est, depuis 1953, une institution à caractère
+            culturel qui groupe un nombre limité d’architectes français ainsi que des membres
+            étrangers. Dès 1843, la Société Centrale des architectes s’est attachée à constituer une
+            bibliothèque et progressivement une collection des dessins originaux, des gravures et
+            des photographies surtout par les dons que lui faisaient ses membres.l’Académie, tout en
+            restant propriétaire de ses fonds, confie au Centre d’Archives du 20e siècle la
+            conservation, traitement, gestion et valorisation de sa collection du 20ème siècle. 
+        </p>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-sm-14 col-xs-4 col-sm-offset-1 col-xs-offset-1">
+                <p class="text-accueil"> La collection du <b>Catalogue I</b> (1750 - 1900) est
+                    ouverte au public sur RDV, <br /> au siège de l’Académie, <i>Hôtel de Chaulnes,
+                        9 place des Vosges, 75004 Paris</i>
+                </p>
 
-    <p class="text-accueil">
-      La collection du <b>Catalogue II</b> (1890-1970), est consultable au <br/> Centre d’Archives du 20ème siècle : <i>127-129 rue de Tolbiac, 75013 Paris</i>
-      <br/>Tél : 01 45 85 12 00"
-    </p>
-    <p class="text-accueil">
-      (Source: Indexation de la bibliothèque de l'Académie sur le site <a href="https://www.gralon.net/mairies-france/paris/bibliotheque-academie-d-architecture-paris-paris_2728.html" class="text-muted">gralon.net</a>)
-    </p>
-  </div>
-  <div class="col-2"></div>
+                <p class="text-accueil"> La collection du <b>Catalogue II</b> (1890-1970), est
+                    consultable au <br /> Centre d’Archives du 20ème siècle : <i>127-129 rue de
+                        Tolbiac, 75013 Paris</i>
+                    <br />Tél : 01 45 85 12 00" </p>
+                <p class="text-accueil"> (Source: Indexation de la bibliothèque de l'Académie sur le site 
+                  <a href="https://www.gralon.net/mairies-france/paris/bibliotheque-academie-d-architecture-paris-paris_2728.htm" class="text-muted">gralon.net</a> ) 
+              </p>
+                <p class="text-accueil"> Accès en ligne aux collections des archives du XXe siècle :
+                        <a href="https://archiwebture.citedelarchitecture.fr" class="text-muted"> Archiwebture</a>
+                </p>
+            </div>
+            <div class="col-2"></div>
 
-
-</div>
-<hr/>
-<p class="sous-titre">Dans cet optique, cet outil de consultation est créé afin de parcourir les références des ouvrages conservés dans la bibliothèque historique de l'insitution.</p>
-<div class="bouton-accueil">
-  <a class="btn-accueil btn-secondary rounded" href="#" role="button">Se connecter pour accéder aux fonds</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+        </div>
+        <hr />
+        <p class="sous-titre">Dans cet optique, cet outil de consultation est créé afin de parcourir
+            les références des ouvrages conservés dans la bibliothèque historique de
+            l'insitution.</p>
+        <div class="bouton-accueil">
+            <a class="btn-accueil btn-secondary rounded" href="#" role="button">Se connecter pour accéder aux fonds</a>
+        </div>
 {% endblock %}
 {% block liste %}
 {% if livre %}

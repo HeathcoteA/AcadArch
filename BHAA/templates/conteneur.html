@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html>
 
-<head>
-  <title>BHAA</title>
-  {% include "partials/css.html" %}
-  {% include "partials/metadata.html" %}
-  <!-- <style>
-  .image-de-fonds {
-    background-image: url("fonds.jpg");
-    height: auto;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    position: relative;
-  }
-</style> -->
-</head>
-<body>
-  <div>
-<img id="image-de-fonds" src="static/images/fonds.jpg" alt="bibliotheque"/>
-  {% include "partials/header.html" %}
-    <div class="card-body">
-      <div class="container">
-        <div class="row">
-          <div class="jumbotron" id="corps">
-            <div class="col-sm-12 col-xs-6 col-sm-offset-6 col-xs-offset-3">
-              {% block corps %}
-              {% endblock %}
+<html>
+    <head>
+      <meta charset="UTF-8"/>
+        <title>BHAA {%block titre %}{%endblock%}</title>
+        <!-- <link media="../images/fonds.jpg"/> -->
+        {% include "partials/css.html" %}
+        {% include "partials/metadata.html" %}
+    </head>
+    <body>
+      <div>
+        <img id="image-de-fonds" src="static/images/fonds.jpg" alt="bibliotheque"/>
+          {% include "partials/header.html" %}
+         <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="jumbotron" id="corps">
+                  <div class="col-sm-12 col-xs-6 col-sm-offset-6 col-xs-offset-3">
+                     {% block corps %}
+                     {% endblock %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
   <!-- <div>{% block liste%}{%endblock%}</div> -->
-  {% include "partials/footer.html" %}
-</body>
+      {% include "partials/footer.html" %}
+     </body>
+
 </html>
