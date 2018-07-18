@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+
+<html>
     <head>
       <meta charset="UTF-8"/>
         <title>BHAA {%block titre %}{%endblock%}</title>
-        <link media="../images/fonds.jpg"/>
+        <!-- <link media="../images/fonds.jpg"/> -->
         {% include "partials/css.html" %}
         {% include "partials/metadata.html" %}
     </head>
-    <body class="fonds">
-      {% include "partials/header.html" %}
-      <!-- <img src="static/images/fonds.jpg" id="fondecran" class="fondecran" alt="fonds d'écran"/> -->
-<div>
-      {% block corps %}
-      {% endblock %}
-      {% block catalogue %}
-      {% endblock %}
-</div>
-        {% include "partials/footer.html" %}
-    </body>
+    <body>
+      <div>
+        <img id="image-de-fonds" src="static/images/fonds.jpg" alt="bibliotheque"/>
+          {% include "partials/header.html" %}
+         <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="jumbotron" id="corps">
+                  <div class="col-sm-12 col-xs-6 col-sm-offset-6 col-xs-offset-3">
+                     {% block corps %}
+                     {% endblock %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- <div>{% block liste%}{%endblock%}</div> -->
+      {% include "partials/footer.html" %}
+     </body>
+
 </html>
