@@ -1,20 +1,25 @@
 {% extends "conteneur.html" %}
 {% block titre %}| Catalogue{%endblock%}
-{% block catalogue %}
+
+{% block corps %}
+
 <h1 class="display-4">CATALOGUE</h1>
-<hr class="invisible"/>
+<br/>
 <p class="text-accueil">
   Voici la liste des ouvrages conservés par l'<b>Académie d'Architecture</b>.
 </p>
 <p class="text-accueil">Les exemplaires historiques sont rangés dans la <b>Bibliothèque du Grand Salon</b>.
+
 </p>
 <p class="text-accueil">
   La Bibliothèque de recherche est en cours de traitement.
 </p>
-<hr class="invisible"/>
+<br/>
+
 <div class="row">
   <div class="col-sm-12 col-xs-4 col-sm-offset-1 col-xs-offset-1">
-    <table>
+    <table id="catalogue_table">
+
       <thead class="thead-light">
         <tr>
           <th scope="col">Auteur(s)</th>
@@ -81,65 +86,9 @@
           <td></td>
           <td>étagère</td>
         </tr>
-        <tr>
-          <td>auteur</td>
-          <td>titre</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>auteur</td>
-          <td></td>
-          <td>éditeur</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>auteur</td>
-          <td></td>
-          <td></td>
-          <td>année</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>auteur</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>étagère</td>
-        </tr>
-        <tr>
-          <td>auteur</td>
-          <td>titre</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>auteur</td>
-          <td></td>
-          <td>éditeur</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>auteur</td>
-          <td></td>
-          <td></td>
-          <td>année</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>auteur</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>étagère</td>
-        </tr>
+
       </tbody>
     </table>
   </div>
-  <div class="col-2"></div>
 </div>
 {% endblock %}
