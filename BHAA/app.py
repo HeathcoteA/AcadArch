@@ -26,6 +26,11 @@ def erreur():
     mots = [" ERREUR "]
     return render_template('pages/erreur.html', titre="Erreur", mots=mots)
 
+@app.route('/recherche')
+def recherche():
+    mots = [" Que recherchez-vous ? "]
+    return render_template('pages/recherche.html', titre="Recheche", mots=mots)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
