@@ -31,6 +31,11 @@ def recherche():
     mots = [" Que recherchez-vous ? "]
     return render_template('pages/recherche.html', titre="Recheche", mots=mots)
 
+@app.route('/localisation')
+def localisation():
+    mots = [" Etagères de la bibliothèque "]
+    return render_template('pages/localisation.html', titre="Localisation", mots=mots)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
