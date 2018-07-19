@@ -16,6 +16,11 @@ def notice():
     mots = [" Visualisation de notice exemplaire "]
     return render_template('pages/notice.html', titre="Notice", mots=mots)
 
+@app.route('/connexion')
+def connexion():
+    mots = [" Connectez-vous "]
+    return render_template('pages/connexion.html', titre="Connexion", mots=mots)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
