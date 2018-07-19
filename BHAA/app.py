@@ -21,7 +21,13 @@ def connexion():
     mots = [" Connectez-vous "]
     return render_template('pages/connexion.html', titre="Connexion", mots=mots)
 
+@app.route('/erreur')
+def erreur():
+    mots = [" ERREUR "]
+    return render_template('pages/erreur.html', titre="Erreur", mots=mots)
+
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 #retirer mode debug une fois le développement terminé !
