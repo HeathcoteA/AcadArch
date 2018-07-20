@@ -138,3 +138,11 @@ Position et paramètres de l'image
   width: 100%;
   z-index: 1;
 }
+
+#logo{
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+}
