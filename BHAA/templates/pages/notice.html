@@ -1,39 +1,48 @@
 {% extends "conteneur.html" %}
 {% block titre %}| Notice exemplaire{%endblock%}
-            {% block corps %}
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="logo.jpg" class="img-thumbnail mx-auto d-block" alt="Couverture d'exemplaire" title="exemplaire"/>
-                                </div>
-                                <div class="col-sm-6">
-                                  <div class="row">
-                                    <div class="col-sm-3">
-                                    <table class="table table-bordered">
-                                      <p>Auteur    Titre     Editeur   Année de publication    Localisation</p>
-                                    </table>
-                                    </div>
-                                    <div class="col-sm-3">
-                                      <div class="row">
-                                          <div class="card">
-                                            <div class="card-body">
-                                              <p class="text-accueil">
-                                                Dans le catalogue il y a plein d'informations</p>
-
-                                                <p class="text-accueil">
-                                                  Dans le catalogue il y a plein d'informations</p>
-
-                                                  <p class="text-accueil">
-                                                    Dans le catalogue il y a plein d'informations</p>
-
-                                                    <p class="text-accueil">
-                                                      Dans le catalogue il y a plein d'informations</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
+{% block corps %}
+<div class="row">
+  <div class="container">
+    <img id="image_exemplaire" src="static/images/logo_notice.jpg" class="img-thumbnail mx-auto d-block" alt="Couverture d'exemplaire" title="exemplaire"/>
+  </div>
+  <div class="row">
+      <div class="container">
+      <table id="notice_table" class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Auteur(s)</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Editeur</th>
+            <th scope="col">Année de publication</th>
+            <th scope="col">Localisation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>un</td>
+            <td>deux</td>
+            <td>trois</td>
+            <td>:</td>
+            <td>python</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row-4">
+      <div class="col-sm-12">
+    <div class="container-card">
+      <p class="text-accueil">
+        {% if exemplaires %}
+        Il y a {{exemplaires|length}} enregistrés , voici le premier : {{exemplaires[0].auteur}}
+        {% else %}
+        La base de données de la bibliothèque historique est en cours de constitution
+        {% endif %}
+      </p>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
 {% endblock %}

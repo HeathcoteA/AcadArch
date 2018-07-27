@@ -90,7 +90,7 @@ a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-table {
+#catalogue_table {
   border-style:solid;
   border-width:5px;
   height: 200px;
@@ -98,15 +98,34 @@ table {
   margin: auto;
 }
 
+#notice_table {
+  border-style:solid;
+  border-width:4px;
+  border-color: black;
+  border-collapse: collapse;
+  height: auto;
+  margin: auto;
+  background-color: white;
+}
+
+/* table{
+ border-style:solid;
+ border-width:5px;
+ height: 200px;
+ overflow-y: scroll;
+ margin: auto;
+}*/
+
 td {
     border-style:solid;
     border-width:5px;
     border-color:grey;
     width:150px;
+    height: auto;
     padding: 12px;
     text-align: center;
   }
-  th {
+th {
     border-style:solid;
     border-width:5px;
     border-color:grey;
@@ -142,7 +161,9 @@ Position et paramètres de l'image
 #logo{
   height: 70px;
   width: 70px;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat no-repeat;
+}
+
+#image_exemplaire{
+  height: 350px;
+  width: 350px;
 }
