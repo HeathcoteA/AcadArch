@@ -1,73 +1,73 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-    # exemplaires = []
-    # if notice:
-exemplaires =[
-{
-    "auteur":"AUGUSTE-ALEX GUILLAUMOT",
-    "titre": "Château de Marly-le-Roy",
-    "éditeur": "A. MOREL",
-    "année de publication": "1865",
-    "localisation": "étagère A"
-},
-{
-    "auteur": "A.L.T. VAUDOYER",
-    "titre": "Description du theatre de marcellus a rome",
-    "éditeur": "DUSILLION",
-    "année de publication": "1812",
-    "localisation": "étagère C"
-},
-{
-    "auteur": "DE COTTE",
-    "titre": "Devis, conditions, prix et adjudications",
-    "éditeur":"inconnu",
-    "année de publication": "1728",
-    "localisation": "étagère A"
-},
-{
-    "auteur": "J. GUADET",
-    "titre": "Elements et theorie de l\'architecture",
-    "éditeur": "LIBRAIRIE DE LA CONSTRUCTION MODERNE",
-    "année de publication": "inconnu",
-    "localisation": "étagèreD"
-},
-{
-    "auteur": "JEAN MONVAL",
-    "titre": "Soufflot",
-    "éditeur": "LIBRAIRIE ALPHONSE LEMERRE",
-    "année de publication": "1918",
-    "localisation": "étagère E"
-},
-{
-    "auteur": "FRANCOIS DERAND",
-    "titre": "Architecture des voutes",
-    "éditeur": "SEBASTIEN CRAMOISY",
-    "année de publication": "1643",
-    "localisation": "étagère M"
-},
-{
-    "auteur": "CESAR DALY",
-    "titre": "Decorations interieures peintes-architecture-Volume1",
-    "éditeur": "LIBRAIRIE GENERALE DE L\'ARCHITECTURE ET DES TRAVAUX PUBLICS - DUCHER ET CIE",
-    "année de publication": "1877",
-    "localisation": "étagère I"
-},
-{
-    "auteur": "GASTON MASPERO",
-    "titre": "L\'archeologie egyptienne",
-    "éditeur": "Quantin",
-    "année de publication": "1887",
-    "localisation":"étagère E"
-},
-{
-    "auteur": "GEORGES GROMORT",
-    "titre": "Essai sur la théorie de l\'architecture: cours professé à l\'école nationale supérieure des beaux-arts",
-    "éditeur": "CH.MASSIN",
-    "année de publication": "1983",
-    "localisation": "inconnu"
-}
-]
+# selon le cours python dispensé à l'ENC par M. Thibault Clérice
+
+livres =[
+    {
+        "auteur":"AUGUSTE-ALEX GUILLAUMOT",
+        "titre": "Château de Marly-le-Roy",
+        "éditeur": "A. MOREL",
+        "publication": "1865",
+        "localisation": "étagère A"
+    },
+    {
+        "auteur": "A.L.T. VAUDOYER",
+        "titre": "Description du theatre de marcellus a rome",
+        "éditeur": "DUSILLION",
+        "publication": "1812",
+        "localisation": "étagère C"
+    },
+    {
+        "auteur": "DE COTTE",
+        "titre": "Devis, conditions, prix et adjudications",
+        "éditeur":"inconnu",
+        "publication": "1728",
+        "localisation": "étagère A"
+    },
+    {
+        "auteur": "J. GUADET",
+        "titre": "Elements et theorie de l\'architecture",
+        "éditeur": "LIBRAIRIE DE LA CONSTRUCTION MODERNE",
+        "publication": "inconnu",
+        "localisation": "étagèreD"
+    },
+    {
+        "auteur": "JEAN MONVAL",
+        "titre": "Soufflot",
+        "éditeur": "LIBRAIRIE ALPHONSE LEMERRE",
+        "publication": "1918",
+        "localisation": "étagère E"
+    },
+    {
+        "auteur": "FRANCOIS DERAND",
+        "titre": "Architecture des voutes",
+        "éditeur": "SEBASTIEN CRAMOISY",
+        "publication": "1643",
+        "localisation": "étagère M"
+    },
+    {
+        "auteur": "CESAR DALY",
+        "titre": "Decorations interieures peintes-architecture-Volume1",
+        "éditeur": "LIBRAIRIE GENERALE DE L\'ARCHITECTURE ET DES TRAVAUX PUBLICS - DUCHER ET CIE",
+        "publication": "1877",
+        "localisation": "étagère I"
+    },
+    {
+        "auteur": "GASTON MASPERO",
+        "titre": "L\'archeologie egyptienne",
+        "éditeur": "QUANTIN",
+        "publication": "1887",
+        "localisation":"étagère E"
+    },
+    {
+        "auteur": "GEORGES GROMORT",
+        "titre": "Essai sur la théorie de l\'architecture: cours professé à l\'école nationale supérieure des beaux-arts",
+        "éditeur": "CH.MASSIN",
+        "publication": "1983",
+        "localisation": "inconnu"
+    }
+    ]
 
 @app.route("/")
 def index():
@@ -76,18 +76,11 @@ def index():
 
 @app.route("/catalogue")
 def catalogue():
-    mots = [" Voici le catalogue "]
-    return render_template("pages/catalogue.html", titre="Catalogue", mots=mots)
+    return render_template("pages/catalogue.html", titre="Catalogue", livres=livres)
 
 @app.route("/notice")
 def notice():
-    mots = [" Visualisation de notice exemplaire "]
-    return render_template("pages/notice.html", titre="Notice", mots=mots)
-
-
-@app.route("/notice/<int:notice_id>")
-def exemplaire(notice_id):
-    return render_template("pages/notice.html", titre="Exemplaire", exemplaire=exemplaires[notice_id])
+    return render_template("pages/notice.html", titre="Notice", livres=livres)
 
 @app.route("/connexion")
 def connexion():

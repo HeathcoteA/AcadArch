@@ -1,6 +1,8 @@
 {% extends "conteneur.html" %}
 {% block titre %}| Notice exemplaire{%endblock%}
+
 {% block corps %}
+
 <div class="row">
   <div class="container">
     <img id="image_exemplaire" src="static/images/logo_notice.jpg" class="img-thumbnail mx-auto d-block" alt="Couverture d'exemplaire" title="exemplaire"/>
@@ -19,11 +21,39 @@
         </thead>
         <tbody>
           <tr>
-            <td>un</td>
-            <td>deux</td>
-            <td>trois</td>
-            <td>:</td>
-            <td>python</td>
+            <td>
+              {% if livres %}
+              {{livres[0].auteur}}
+              {% else %}
+              *erreur*
+              {% endif %}
+            </td>
+            <td>
+            {% if livres %}
+            {{livres[0].titre}}
+            {% else %}
+            *erreur*
+            {% endif %}
+          </td>
+            <td>
+            {% if livres %}
+            {{livres[0].éditeur}}
+            {% else %}
+            *erreur*
+            {% endif %}
+          </td>
+            <td>{% if livres %}
+            {{livres[0].publication}}
+            {% else %}
+            *erreur*
+            {% endif %}
+          </td>
+            <td>{% if livres %}
+            {{livres[0].localisation}}
+            {% else %}
+            *erreur*
+            {% endif %}
+          </td>
           </tr>
         </tbody>
       </table>
@@ -32,10 +62,15 @@
       <div class="col-sm-12">
     <div class="container-card">
       <p class="text-accueil">
-        {% if exemplaires %}
-        Il y a {{exemplaires|length}} enregistrés , voici le premier : {{exemplaires[0].auteur}}
+        {% if livres %}
+        Il y a {{livres|length}} livres enregistrés ,
+        <br/>
+        Le livre "<i>{{livres[0].titre}}</i>" a été écrit par {{livres[0].auteur}} et publié par {{livres[0].éditeur}} en {{livres[0].publication}}
+        et se trouve sur l'{{livres[0].localisation}} de la bibliothèque du Grand Salon de l'Académie d'Architecture.
+        <br/>
+        <br/>
         {% else %}
-        La base de données de la bibliothèque historique est en cours de constitution
+        La base de données de la bibliothèque historique est en cours de constitution mais l'affichage NE FONCTIONNE PAS
         {% endif %}
       </p>
     </div>
