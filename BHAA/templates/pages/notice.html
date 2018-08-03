@@ -63,7 +63,7 @@
     <div class="container-card">
       <p class="text-accueil">
         {% if livres %}
-        Il y a {{livres|length}} livres enregistrés ,
+        Affichage du livre {{livres[0].id}} sur {{livres|length}} livres enregistrés ,
         <br/>
         Le livre "<i>{{livres[0].titre}}</i>" a été écrit par {{livres[0].auteur}} et publié par {{livres[0].éditeur}} en {{livres[0].publication}}
         et se trouve sur l'{{livres[0].localisation}} de la bibliothèque du Grand Salon de l'Académie d'Architecture.

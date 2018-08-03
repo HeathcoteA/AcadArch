@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 livres =[
     {
+        "id":"1",
         "auteur":"AUGUSTE-ALEX GUILLAUMOT",
         "titre": "Château de Marly-le-Roy",
         "éditeur": "A. MOREL",
@@ -12,6 +13,7 @@ livres =[
         "localisation": "étagère A"
     },
     {
+        "id":"2",
         "auteur": "A.L.T. VAUDOYER",
         "titre": "Description du theatre de marcellus a rome",
         "éditeur": "DUSILLION",
@@ -19,6 +21,7 @@ livres =[
         "localisation": "étagère C"
     },
     {
+        "id":"3",
         "auteur": "DE COTTE",
         "titre": "Devis, conditions, prix et adjudications",
         "éditeur":"inconnu",
@@ -26,6 +29,7 @@ livres =[
         "localisation": "étagère A"
     },
     {
+        "id":"4",
         "auteur": "J. GUADET",
         "titre": "Elements et theorie de l\'architecture",
         "éditeur": "LIBRAIRIE DE LA CONSTRUCTION MODERNE",
@@ -33,6 +37,7 @@ livres =[
         "localisation": "étagèreD"
     },
     {
+        "id":"5",
         "auteur": "JEAN MONVAL",
         "titre": "Soufflot",
         "éditeur": "LIBRAIRIE ALPHONSE LEMERRE",
@@ -40,6 +45,7 @@ livres =[
         "localisation": "étagère E"
     },
     {
+        "id":"6",
         "auteur": "FRANCOIS DERAND",
         "titre": "Architecture des voutes",
         "éditeur": "SEBASTIEN CRAMOISY",
@@ -47,6 +53,7 @@ livres =[
         "localisation": "étagère M"
     },
     {
+        "id":"7",
         "auteur": "CESAR DALY",
         "titre": "Decorations interieures peintes-architecture-Volume1",
         "éditeur": "LIBRAIRIE GENERALE DE L\'ARCHITECTURE ET DES TRAVAUX PUBLICS - DUCHER ET CIE",
@@ -54,6 +61,7 @@ livres =[
         "localisation": "étagère I"
     },
     {
+        "id":"8",
         "auteur": "GASTON MASPERO",
         "titre": "L\'archeologie egyptienne",
         "éditeur": "QUANTIN",
@@ -61,6 +69,7 @@ livres =[
         "localisation":"étagère E"
     },
     {
+        "id":"9",
         "auteur": "GEORGES GROMORT",
         "titre": "Essai sur la théorie de l\'architecture: cours professé à l\'école nationale supérieure des beaux-arts",
         "éditeur": "CH.MASSIN",
@@ -81,6 +90,11 @@ def catalogue():
 @app.route("/notice")
 def notice():
     return render_template("pages/notice.html", titre="Notice", livres=livres)
+
+# afficher une notice avec URL propre "notice/1"
+# @app.route("/notice/<int:notice_id>")
+# def notice(notice_id):
+#     return render_template("pages/notice.html", titre="Notice", livres=livres[notice_id])
 
 @app.route("/connexion")
 def connexion():
