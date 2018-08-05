@@ -5,6 +5,19 @@
 
 <div class="row">
   <div class="container">
+  {% if livres %}
+        <h1>{{livres.livre_titre}}</h1>
+        <dl>
+            <dt>auteur</dt><dd>{{livres.livre_auteur}}</dd>
+            <dt>editeur</dt><dd>{{livres.livre_editeur}}</dd>
+            <dt>annee</dt><dd>{{livres.livre_annee}}</dd>
+            <dt>localisation</dt><dd>{{livres.livre_localisation}}</dd>
+        </dl>
+    {% else %}
+        <p> ENCORE RATÉ ! </p>
+    {% endif %}
+  </div>
+  <div class="container">
     <img id="image_exemplaire" src="static/images/logo_notice.jpg" class="img-thumbnail mx-auto d-block" alt="Couverture d'exemplaire" title="exemplaire"/>
   </div>
   <div class="row">
@@ -23,33 +36,33 @@
           <tr>
             <td>
               {% if livres %}
-              {{livres[0].auteur}}
+              {{livres.livre_auteur}}
               {% else %}
               *erreur*
               {% endif %}
             </td>
             <td>
             {% if livres %}
-            {{livres[0].titre}}
+            {{livres.livre_titre}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
             <td>
             {% if livres %}
-            {{livres[0].éditeur}}
+            {{livres.livre_editeur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
             <td>{% if livres %}
-            {{livres[0].publication}}
+            {{livres.livre_annee}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
             <td>{% if livres %}
-            {{livres[0].localisation}}
+            {{livres.livre_localisation}}
             {% else %}
             *erreur*
             {% endif %}
@@ -63,10 +76,10 @@
     <div class="container-card">
       <p class="text-accueil">
         {% if livres %}
-        Affichage du livre {{livres[0].id}} sur {{livres|length}} livres enregistrés ,
+        Affichage du livre {{livres.livre_id}} des livres enregistrés ,
         <br/>
-        Le livre "<i>{{livres[0].titre}}</i>" a été écrit par {{livres[0].auteur}} et publié par {{livres[0].éditeur}} en {{livres[0].publication}}
-        et se trouve sur l'{{livres[0].localisation}} de la bibliothèque du Grand Salon de l'Académie d'Architecture.
+        Le livre "<i>{{livres.livre_titre}}</i>" a été écrit par {{livres.livre_auteur}} et publié par {{livres.livre_editeur}} en {{livres.livre_annee}}
+        et se trouve sur l'étagère {{livres.livre_localisation}} de la bibliothèque du Grand Salon de l'Académie d'Architecture.
         <br/>
         <br/>
         {% else %}

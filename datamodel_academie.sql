@@ -10,6 +10,21 @@ CREATE SCHEMA IF NOT EXISTS `academie` DEFAULT CHARACTER SET utf8 ;
 USE `academie` ;
 
 -- -----------------------------------------------------
+-- Table `academie`.`livre`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `academie`.`livre` ;
+
+CREATE TABLE IF NOT EXISTS `academie`.`livre` (
+  `livre_id` INT NOT NULL AUTO_INCREMENT,
+  `livre_auteur` TEXT NOT NULL,
+  `livre_titre` TEXT NOT NULL,
+  `livre_editeur` TEXT NOT NULL,
+  `livre_annee` TEXT NOT NULL,
+  `livre_localisation` TEXT NOT NULL,
+  PRIMARY KEY (`place_id`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
 -- Table `academie`.`user`
 -- -----------------------------------------------------
 

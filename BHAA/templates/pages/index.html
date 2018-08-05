@@ -12,7 +12,7 @@
             bibliothèque et progressivement une collection des dessins originaux, des gravures et
             des photographies surtout par les dons que lui faisaient ses membres.l’Académie, tout en
             restant propriétaire de ses fonds, confie au Centre d’Archives du 20e siècle la
-            conservation, traitement, gestion et valorisation de sa collection du 20ème siècle. 
+            conservation, traitement, gestion et valorisation de sa collection du 20ème siècle.
         </p>
         <div class="row">
             <div class="col-2"></div>
@@ -26,8 +26,8 @@
                     consultable au <br /> Centre d’Archives du 20ème siècle : <i>127-129 rue de
                         Tolbiac, 75013 Paris</i>
                     <br />Tél : 01 45 85 12 00" </p>
-                <p class="text-accueil"> (Source: Indexation de la bibliothèque de l'Académie sur le site 
-                  <a href="https://www.gralon.net/mairies-france/paris/bibliotheque-academie-d-architecture-paris-paris_2728.htm" class="text-muted">gralon.net</a> ) 
+                <p class="text-accueil"> (Source: Indexation de la bibliothèque de l'Académie sur le site
+                  <a href="https://www.gralon.net/mairies-france/paris/bibliotheque-academie-d-architecture-paris-paris_2728.htm" class="text-muted">gralon.net</a> )
               </p>
                 <p class="text-accueil"> Accès en ligne aux collections des archives du XXe siècle :
                         <a href="https://archiwebture.citedelarchitecture.fr" class="text-muted"> Archiwebture</a>
@@ -41,27 +41,7 @@
             les références des ouvrages conservés dans la bibliothèque historique de
             l'insitution.</p>
         <div class="bouton-accueil">
-            <a class="btn-accueil btn-secondary rounded" href="#" role="button">Se connecter pour accéder aux fonds</a>
+            <a class="btn-accueil btn-secondary rounded" href="{{url_for('connexion')}}" role="button">Se connecter pour accéder aux fonds</a>
         </div>
-{% endblock %}
-{% block liste %}
-{% if livre %}
-<p>Application de gestion de la bibliothèque patrimoniale de l'Académie d'Architecture</p>
-<ul>
-
-  <li>accueil</li>
-  <li>formulaire</li>
-  <li>identification</li>
-
-</ul>
-<p>Il y a {{livre|length}} livres enregistrés :</p>
-<ul>
-  {% for livre in livres %}
-  <li><a href="{{url_for('livre', livre_id=livre.livre_id)}}">{{livre.livre_titre}}</a></li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>La base de données de la <b>bibliothèque</b> est en cours de constitution</p>
-{% endif %}
 {% endblock %}
 </div>

@@ -17,6 +17,8 @@
     <h5 class="text-lg-center">
       {% if livres %}
       Il y a {{livres|length}} livres enregistrés.
+
+      <br/>
       {% else %}
       La base de données de la bibliothèque historique est en cours de constitution mais l'affichage NE FONCTIONNE PAS
       {% endif %}
@@ -36,33 +38,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[0].auteur}}
+            {{livres[0].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[0].titre}}
+          {{livres[0].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[0].éditeur}}
+          {{livres[0].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[0].publication}}
+          {{livres[0].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[0].localisation}}
+          {{livres[0].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}
@@ -71,33 +73,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[1].auteur}}
+            {{livres[1].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[1].titre}}
+          {{livres[1].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[1].éditeur}}
+          {{livres[1].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[1].publication}}
+          {{livres[1].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[1].localisation}}
+          {{livres[1].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}
@@ -106,33 +108,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[2].auteur}}
+            {{livres[2].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[2].titre}}
+          {{livres[2].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[2].éditeur}}
+          {{livres[2].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[2].publication}}
+          {{livres[2].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[2].localisation}}
+          {{livres[2].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}
@@ -141,33 +143,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[3].auteur}}
+            {{livres[3].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[3].titre}}
+          {{livres[3].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[3].éditeur}}
+          {{livres[3].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[3].publication}}
+          {{livres[3].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[3].localisation}}
+          {{livres[3].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}
@@ -176,33 +178,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[4].auteur}}
+            {{livres[4].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[4].titre}}
+          {{livres[4].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[4].éditeur}}
+          {{livres[4].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[4].publication}}
+          {{livres[4].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[4].localisation}}
+          {{livres[4].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}
@@ -211,33 +213,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[5].auteur}}
+            {{livres[5].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[5].titre}}
+          {{livres[5].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[5].éditeur}}
+          {{livres[5].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[5].publication}}
+          {{livres[5].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[5].localisation}}
+          {{livres[5].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}
@@ -246,33 +248,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[6].auteur}}
+            {{livres[6].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[6].titre}}
+          {{livres[6].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[6].éditeur}}
+          {{livres[6].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[6].publication}}
+          {{livres[6].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[6].localisation}}
+          {{livres[6].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}
@@ -281,68 +283,33 @@
         <tr>
           <td>
             {% if livres %}
-            {{livres[7].auteur}}
+            {{livres[7].livre_auteur}}
             {% else %}
             *erreur*
             {% endif %}
           </td>
           <td>
           {% if livres %}
-          {{livres[7].titre}}
+          {{livres[7].livre_titre}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>
           {% if livres %}
-          {{livres[7].éditeur}}
+          {{livres[7].livre_editeur}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[7].publication}}
+          {{livres[7].livre_annee}}
           {% else %}
           *erreur*
           {% endif %}
         </td>
           <td>{% if livres %}
-          {{livres[7].localisation}}
-          {% else %}
-          *erreur*
-          {% endif %}
-        </td>
-        </tr>
-        <tr>
-          <td>
-            {% if livres %}
-            {{livres[8].auteur}}
-            {% else %}
-            *erreur*
-            {% endif %}
-          </td>
-          <td>
-          {% if livres %}
-          {{livres[8].titre}}
-          {% else %}
-          *erreur*
-          {% endif %}
-        </td>
-          <td>
-          {% if livres %}
-          {{livres[8].éditeur}}
-          {% else %}
-          *erreur*
-          {% endif %}
-        </td>
-          <td>{% if livres %}
-          {{livres[8].publication}}
-          {% else %}
-          *erreur*
-          {% endif %}
-        </td>
-          <td>{% if livres %}
-          {{livres[8].localisation}}
+          {{livres[7].livre_localisation}}
           {% else %}
           *erreur*
           {% endif %}

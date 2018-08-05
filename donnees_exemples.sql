@@ -3,6 +3,7 @@
 -- les transactions sécurisent les envois de données par blocs committés
 -- ---------------------------------------------------------------------
 SET autocommit = 0;
+
 -- ----------------------------------
 -- Data for table `academie`.`user`
 -- ----------------------------------
