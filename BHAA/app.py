@@ -35,11 +35,6 @@ def notice(livre_id):
     exemplaire_livre = Livres.query.get(livre_id)
     return render_template("pages/notice.html", nom="BHAA", livres=exemplaire_livre)
 
-# afficher une notice avec URL propre "notice/1"
-# @app.route("/notice/<int:notice_id>")
-# def notice(notice_id):
-#     return render_template("pages/notice.html", nom="BHAA", livres=livres[notice_id])
-
 @app.route("/connexion")
 def connexion():
     mots = [" Connectez-vous "]
